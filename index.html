@@ -291,6 +291,13 @@ Description: "A broad and robust understanding of computer science and programmi
 
         const selectedType = courseTypeSelect.value;
 
+if (!selectedCategory || !selectedType) {
+  alert("Please Fill all the options before proceeding.");
+  return;
+}
+
+        
+
         const filteredCourses = courses.filter((course) => {
           return (
   (!selectedCategory || course.category === selectedCategory) &&
